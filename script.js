@@ -17,11 +17,12 @@ async function getWeather(location, method) {
     // toggle
     const toggleIcon = document.querySelector('.toggle');
     function toggle () {
-        const img = document.querySelector('.unit-icon');
-        if (img) {
-            img.classList.contains('fah') ? render(weather, createCelsiusIcon) : render(weather, createFahrenheitIcon);
-            toggleIcon.src = img.classList.contains('fah') ? "./icons/cel.svg" : "./icons/fah.svg";
-        } 
+        const isFah = toggleIcon.src.includes('fah.svg'); 
+        const method = isFah ? createCelsiusIcon : createFahrenheitIcon;
+
+        render(weather, method);
+
+        toggleIcon.src = isFah ? "./icons/cel.svg" : "./icons/fah.svg";
     }
     
     toggleIcon.addEventListener('click', toggle);
