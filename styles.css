@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+/* ---------- Header ---------- */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+}
+
+/* ---------- Toggle ---------- */
+.toggle {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* ---------- Search Form ---------- */
+.searchByLocation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- Input ---------- */
+.searchByLocation input {
+  width: 220px;
+  padding: 8px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchByLocation input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ---------- Button ---------- */
+.search-btn {
+  padding: 8px 16px;
+
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.search-btn:hover {
+  background-color: #2563eb;
+}
+
+.search-btn:active {
+  transform: scale(0.97);
+}
+
+/* ---------- Page Content ---------- */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Location ---------- */
+.location {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+/* ---------- Main Temperature ---------- */
+.tempContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ---------- Unit Icon ---------- */
+.tempContainer img {
+  width: 48px;
+  height: 48px;
+  transform: translateY(-4px); /* optically align with text */
+}
+
+/* ---------- Conditions ---------- */
+.condition {
+  font-size: 16px;
+  opacity: 0.75;
+  text-transform: capitalize;
+}
+
+/* ---------- High / Low ---------- */
+.highLow {
+  display: flex;
+  gap: 36px;
+  margin-top: 6px;
+}
+
+.highLow .tempContainer {
+  gap: 4px;
+}
+
+.highTemp,
+.lowTemp {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Optional visual distinction */
+.highTemp {
+  color: #ef4444; /* warm red */
+}
+
+.lowTemp {
+  color: #3b82f6; /* cool blue */
+}
